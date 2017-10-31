@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use strict';
 
 function getRandomIntInclusive(min, max){
@@ -65,3 +66,5 @@ powells.hourlySales();
 stJohns.hourlySales();
 waterfront.hourlySales();
 console.log(pdx);
+=======
+>>>>>>> 91988dd6e51f2b06a298661434a96786f00cf641
