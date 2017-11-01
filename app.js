@@ -5,13 +5,19 @@ function getRandomIntInclusive(min, max){
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;} //The maximum is inclusive and the minimum is inclusive}
 
+//store hours   
 const hours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
+
+//store object literals
 const pdx = {
     name:'pdx Airport',
     min: 23,
     max: 65,
     averageCookies: 6.3,
     cookiesSold:hourlySales
+    salesPerHour:[],
+    render:render
+    
 };
 const pioneer = {
     name:'PioneerPlace',
@@ -19,6 +25,9 @@ const pioneer = {
     max:24,
     averageCookies:1.2,
     cookiesSold:hourlySales
+    salesPerHour:[],
+    render:render
+    
 };
 
 const powells = {
@@ -27,6 +36,8 @@ const powells = {
     max:38,
     averageCookies:3.7,
     cookiesSold:hourlySales
+    salesPerHour:[],
+    render:render
 };
 
 const stJohns = {
@@ -35,6 +46,8 @@ const stJohns = {
     max:38,
     averageCookies:2.3,
     cookiesSold:hourlySales
+    salesPerHour:[],
+    render:render
 };
 
 const waterfront = {
@@ -43,6 +56,8 @@ const waterfront = {
     max:16,
     averageCookies:4.6,
     cookiesSold:hourlySales
+    salesPerHour:[],
+    render:render
 };
 
 function hourlySales(){
@@ -65,4 +80,20 @@ powells.cookiesSold();
 stJohns.cookiesSold();
 waterfront.cookiesSold();
 console.log(pdx);
+
+//function render (){
+//  const div = document.getElementById ('SalmonCookies');
+//const h2 = createElement
+
+//    const totalSales = [];
+//    for(let i = 0; i <stores..length; i ++);{
+//    stores = [i];
+//}
+
+
+
+
+
+
+
 
