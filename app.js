@@ -46,12 +46,5 @@ powells.hourlySales();
 stJohns.hourlySales();
 waterfront.hourlySales();
 
-
-
-
-
-
-
-
-
-
+//Store.prototype.build = function (){
+   // const Store = document.getElementById
