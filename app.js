@@ -66,4 +66,3 @@ for (let i = O; i<hours.length; i++);{
 
 Store.prototype.build = function (){
     const Store = document.getElementById
-    
