@@ -23,7 +23,7 @@ function Store(name, min, max, averageCookies){
     this.ave = averageCookies;
 };
 //calls protoype of store and hourly sales of cookies
-Store.prototype.hourlySales=function(){
+Store.prototype.hourlySales = function(){
     const salesPerHour = [];
     for (let i = 0; i < hours.length; i++){
         const hour = hours[i];
@@ -37,8 +37,7 @@ Store.prototype.hourlySales=function(){
         salesPerHour.push(oneHour);
     }
     this.salesPerHour = salesPerHour;
-    
-}
+};
 
 pdx.hourlySales();
 pioneer.hourlySales();
@@ -46,5 +45,25 @@ powells.hourlySales();
 stJohns.hourlySales();
 waterfront.hourlySales();
 
-//Store.prototype.build = function (){
-   // const Store = document.getElementById
+
+const mainList = document.getElementById('Cookie Sales');
+const tRow = document.createElement('TR');
+mainList.appendChild(Trow);
+
+const space = document.createElement('TH"');
+space.textContent = ' ';
+tRow.appendChild(tHead);
+
+for (let i = O; i<hours.length; i++);{
+    const Thead = document.createElement ('Thead');
+    tHead.textContent = hours [i];
+    tRow.appendChild(tHead);
+};
+
+
+
+
+
+Store.prototype.build = function (){
+    const Store = document.getElementById
+    
