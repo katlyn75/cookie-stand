@@ -4,9 +4,10 @@ function getRandomIntInclusive(min, max){
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
-}; //The maximum is inclusive and the minimum is inclusive}
+}
+//The maximum is inclusive and the minimum is inclusive}
 
-//store hours   
+//store hours
 const hours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
 
 //constructor function for object literals
@@ -45,24 +46,35 @@ powells.hourlySales();
 stJohns.hourlySales();
 waterfront.hourlySales();
 
+Store.prototype.build = function (){
 
-const mainList = document.getElementById('Cookie Sales');
-const tRow = document.createElement('TR');
-mainList.appendChild(Trow);
 
-const space = document.createElement('TH"');
-space.textContent = ' ';
-tRow.appendChild(tHead);
 
-for (let i = O; i<hours.length; i++);{
-    const Thead = document.createElement ('Thead');
-    tHead.textContent = hours [i];
-    tRow.appendChild(tHead);
+    const mainList = document.getElementById('table-section');
+    const locName = document.createElement('TH');
+    mainList.appendChild(locName);
+
+    for (let i = 0; i < 5; i ++){
+        const tRow = document.createElement('TR');
+        mainList.appendChild(tRow);
+        for(let i = 0; i < this.salesPerHour.length; i ++){
+            const allCookies = document.createElement('TD');
+            allCookies.textContent = this.salesPerHour[i].cookiesSold;
+            tRow.appendChild(allCookies);
+
+        }
+    }
+
+    for (let i = 0; i < hours.length; i++){
+        const allHours = document.createElement('TD');
+        allHours.textContent = hours[i];
+        locName.appendChild(allHours);
+    }
 };
 
 
-
-
-
-Store.prototype.build = function (){
-    const Store = document.getElementById
+pdx.build();
+pioneer.build();
+powells.build();
+stJohns.build();
+waterfront.build();
