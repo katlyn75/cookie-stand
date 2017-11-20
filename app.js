@@ -4,9 +4,10 @@ function getRandomIntInclusive(min, max){
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
-}; //The maximum is inclusive and the minimum is inclusive}
+}
+//The maximum is inclusive and the minimum is inclusive}
 
-//store hours   
+//store hours
 const hours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
 //store names array
 //const storeNames = ['pdx Airport','Pioneer Place','Powells','StJohns','Waterfront'];
@@ -27,7 +28,7 @@ function Store(name, min, max, averageCookies){
 
 };
 //calls protoype of store and hourly sales of cookies
-Store.prototype.hourlySales=function(){
+Store.prototype.hourlySales = function(){
     const salesPerHour = [];
     for (let i = 0; i < hours.length; i++){
         const hour = hours[i];
@@ -41,20 +42,43 @@ Store.prototype.hourlySales=function(){
         salesPerHour.push(oneHour);
     }
     this.salesPerHour = salesPerHour;
+};
     
-}
 pdx.hourlySales();
 pioneer.hourlySales();
 powells.hourlySales();
 stJohns.hourlySales();
 waterfront.hourlySales();
 
+Store.prototype.build = function (){
 
 
 
+    const mainList = document.getElementById('table-section');
+    const locName = document.createElement('TH');
+    mainList.appendChild(locName);
+
+    for (let i = 0; i < 5; i ++){
+        const tRow = document.createElement('TR');
+        mainList.appendChild(tRow);
+        for(let i = 0; i < this.salesPerHour.length; i ++){
+            const allCookies = document.createElement('TD');
+            allCookies.textContent = this.salesPerHour[i].cookiesSold;
+            tRow.appendChild(allCookies);
+
+        }
+    }
+
+    for (let i = 0; i < hours.length; i++){
+        const allHours = document.createElement('TD');
+        allHours.textContent = hours[i];
+        locName.appendChild(allHours);
+    }
+};
 
 
-
-
-
-
+pdx.build();
+pioneer.build();
+powells.build();
+stJohns.build();
+waterfront.build();
