@@ -9,6 +9,8 @@ function getRandomIntInclusive(min, max){
 
 //store hours
 const hours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
+//store names array
+//const storeNames = ['pdx Airport','Pioneer Place','Powells','StJohns','Waterfront'];
 
 //constructor function for object literals
 const pdx = new Store('pdx Airport',23,65,6.3);
@@ -22,6 +24,8 @@ function Store(name, min, max, averageCookies){
     this.min = min;
     this.max = max;
     this.ave = averageCookies;
+
+
 };
 //calls protoype of store and hourly sales of cookies
 Store.prototype.hourlySales = function(){
@@ -39,7 +43,7 @@ Store.prototype.hourlySales = function(){
     }
     this.salesPerHour = salesPerHour;
 };
-
+    
 pdx.hourlySales();
 pioneer.hourlySales();
 powells.hourlySales();
